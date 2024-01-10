@@ -15,6 +15,10 @@
 </template>
 
 <script setup>
+const colorMode = useColorMode();
+
+console.log(colorMode.preference);
+
 useHead({
     titleTemplate: '%s - wheatzman',
     link: [
@@ -24,7 +28,7 @@ useHead({
         },
         {
             rel: 'stylesheet',
-            href: 'https://fonts.googleapis.com/css2?family=Noto&display=swap',
+            href: 'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',
             crossorigin: ''
         }
     ]
@@ -33,7 +37,11 @@ useHead({
 
 <style>
 body {
-    font-family: 'Noto';
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    @apply bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300
 }
 
 </style>
